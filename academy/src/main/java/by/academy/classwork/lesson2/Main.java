@@ -20,6 +20,10 @@ public class Main {
 
         Cat cat4 = new Cat("Маргоша", 2500.0);
         System.out.println(cat4);
+        
+        System.out.println();
+        Dog dog_Bobik = new Dog();
+        dog_Bobik.bark();
 
     }
 
