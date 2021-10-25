@@ -10,6 +10,7 @@ public class Main {
         cat1.walk();
 
         Cat cat2 = new Cat();
+        System.out.println(cat2);
 
         Cat cat3 = new Cat("Васька", 3);
         System.out.println(cat3);
