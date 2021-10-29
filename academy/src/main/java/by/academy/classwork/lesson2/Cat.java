@@ -10,24 +10,20 @@ public class Cat {
     }
 
     public Cat(String name) {
-        super();
         this.name = name;
     }
 
     public Cat(String name, int age) {
-        super();
         this.name = name;
         this.age = age;
     }
 
     public Cat(String name, double money) {
-        super();
         this.name = name;
         this.money = money;
     }
 
     public Cat(String name, int age, double money) {
-        super();
         this.name = name;
         this.age = age;
         this.money = money;
@@ -58,17 +54,17 @@ public class Cat {
     }
 
     public void sleep(int hours) {
-        System.out.println(name + " спит " + hours + " часов в день");
+        System.out.println(name + " СЃРїРёС‚ " + hours + " С‡Р°СЃРѕРІ РІ РґРµРЅСЊ");
 
     }
 
     public void eat(String food) {
-        System.out.println(name + " кушает " + food);
+        System.out.println(name + " РєСѓС€Р°РµС‚ " + food);
 
     }
 
     public void walk() {
-        System.out.println(name + " гуляет по природе");
+        System.out.println(name + " РіСѓР»СЏРµС‚ РЅР° РїСЂРёСЂРѕРґРµ");
 
     }
 

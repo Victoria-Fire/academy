@@ -3,27 +3,23 @@ package by.academy.classwork.lesson2;
 public class Main {
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat("Барсик", 7, 500);
+        Cat cat1 = new Cat("Р‘Р°СЂСЃРёРє", 7, 500);
         System.out.println(cat1);
         cat1.sleep(8);
-        cat1.eat("рыбку");
+        cat1.eat("РєСѓСЂРѕС‡РєСѓ");
         cat1.walk();
 
         Cat cat2 = new Cat();
         System.out.println(cat2);
 
-        Cat cat3 = new Cat("Васька", 3);
+        Cat cat3 = new Cat("Р’Р°СЃСЊРєР°", 3);
         System.out.println(cat3);
         cat1.sleep(12);
-        cat1.eat("курочку");
+        cat1.eat("СЂС‹Р±РєСѓ");
         cat1.walk();
 
-        Cat cat4 = new Cat("Маргоша", 2500.0);
+        Cat cat4 = new Cat("РњР°СЂСѓСЃСЏ", 2500.0);
         System.out.println(cat4);
-        
-        System.out.println();
-        Dog dog_Bobik = new Dog();
-        dog_Bobik.bark();
 
     }
 
