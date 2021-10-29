@@ -14,6 +14,8 @@ public class Test_3 {
 		} else {
 			System.out.println("Ваше число " + number + " - нечётное =(");
 		}
+		
+		sc.close();
 
 	}
 

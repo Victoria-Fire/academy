@@ -35,6 +35,8 @@ public class Week {
 		default:
 			System.out.println("Дня с таким номером не существует");
 		}
+		
+		sc.close();
 
 	}
 

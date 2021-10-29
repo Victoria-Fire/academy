@@ -50,6 +50,8 @@ public class Test_0 {
 			System.out.println("Упс! Такого месяца не существует =)");
 
 		}
+		
+		sc.close();
 
 	}
 
