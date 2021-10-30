@@ -21,7 +21,7 @@ public class Massive_Test {
 			array[i] += 10;
 		}
 		
-		System.out.println("new array;");
+		System.out.println("new array:");
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i] + " ");
 		}
