@@ -21,7 +21,7 @@ public class Test_5 {
 		}
 		
 		System.out.println("Среднее арифметическое равно: " + c);
-				
+			
 		sc.close();	
 
 	}
