@@ -52,8 +52,7 @@ public class ClothesHard {
 		String genderInF;
 		int countIn;
 
-		Scanner sc1 = new Scanner(System.in);
-		Scanner sc2 = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		while (true) {
 			System.out.println();
@@ -61,7 +60,7 @@ public class ClothesHard {
 			System.out.println("> Рубашка - нажмите 1");
 			System.out.println("> Брюки - нажмите 2");
 			System.out.println("> Юбка - нажмите 3");
-			typeIn = sc1.nextInt();
+			typeIn = sc.nextInt();
 
 			switch (typeIn) {
 			case 1:
@@ -90,7 +89,7 @@ public class ClothesHard {
 			System.out.println("> Белый - нажмите 1");
 			System.out.println("> Черный - нажмите 2");
 			System.out.println("> Серый - нажмите 3");
-			colorIn = sc1.nextInt();
+			colorIn = sc.nextInt();
 
 			switch (colorIn) {
 			case 1:
@@ -117,7 +116,7 @@ public class ClothesHard {
 			System.out.println();
 			System.out.println("Вы Супермен?");
 			System.out.println("> Да или Нет");
-			genderInM = sc2.nextLine();
+			genderInM = sc.next();
 
 			if ((genderInM.equals("Да")) || (genderInM.equals("да")) || (genderInM.equals("Lf"))
 					|| (genderInM.equals("lf"))) {
@@ -127,7 +126,7 @@ public class ClothesHard {
 					|| (genderInM.equals("ytn"))) {
 				System.out.println("Вы Женщина-Кошка?");
 				System.out.println("> Да или Нет");
-				genderInF = sc2.nextLine();
+				genderInF = sc.next();
 				if ((genderInF.equals("Да")) || (genderInF.equals("да")) || (genderInF.equals("Lf"))
 						|| (genderInF.equals("lf"))) {
 					gender = "Женский";
@@ -144,7 +143,7 @@ public class ClothesHard {
 		while (true) {
 			System.out.println();
 			System.out.println("Какое количество наших вещей будете брать?");
-			countIn = sc1.nextInt();
+			countIn = sc.nextInt();
 
 			if ((countIn > 0) && (countIn <= 100)) {
 				count = countIn;
@@ -158,8 +157,7 @@ public class ClothesHard {
 		if (countObj == 1) {
 			countObj--;
 		} else {
-			sc1.close();
-			sc2.close();
+			sc.close();
 		}
 
 	}
