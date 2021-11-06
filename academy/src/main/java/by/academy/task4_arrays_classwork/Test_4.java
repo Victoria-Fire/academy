@@ -5,19 +5,13 @@ public class Test_4 {
 	public static void main(String[] args) {
 		int[][] array = {
 				{ 2, 5, -7, 65, -43, 67, -54, 65 },
-				{ 54, -76, -5, 86, 897, -43, 32, 5 },
-				{ -999, 5, 54, 786, 987, -43, 32, 54 },
+				{ 54, -76, -5, 86, 777, -43, 24, 5 },
+				{ -999, 5, 54, 786, 987, -43, 37, 54 },
 				{ 65, -84, -3, 23, 4, 51, 54, -123 },
 				{ 33, 44, 65, -2, 1, 4, -6, -8 }
 				};
 		
 		int[][] arrayTwo = new int [5][2];
-		
-		for (int i = 0; i < arrayTwo.length; i++) {
-			for (int j = 0; j < arrayTwo[i].length; j++) {
-				arrayTwo[i][j] = 0;
-			}
-		}
 		
 		for (int i = 0; i < array.length; i++) {
 		for (int j = 0; j < array[i].length; j++) {
