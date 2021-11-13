@@ -15,7 +15,7 @@ public class Application {
 		System.out.println(b1);
 		b1.carRental();
 		
-		Car m1 = new Mersedes(3, 77.4);
+		Car m1 = new Mersedes();
 		System.out.println(m1.getDay());
 		System.out.println(m1.getCost());
 		System.out.println(m1);

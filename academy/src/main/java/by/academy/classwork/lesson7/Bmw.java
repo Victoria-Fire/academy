@@ -10,5 +10,16 @@ public class Bmw extends Car {
 		super(day, cost);
 		
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Bmw [day=");
+		builder.append(getDay());
+		builder.append(", cost=");
+		builder.append(getCost());
+		builder.append("]");
+		return builder.toString();
+	}
 
 }
