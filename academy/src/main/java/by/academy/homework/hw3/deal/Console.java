@@ -17,7 +17,7 @@ public class Console {
 		createMoneyUser(user);
 	}
 
-	public void createNameUser(User user) {
+	private void createNameUser(User user) {
 		System.out.println("Введите имя:");
 		while (true) {
 			String nameCreate = sc.next();
@@ -30,7 +30,7 @@ public class Console {
 		}
 	}
 
-	public void createDateOfBirth(User user) {
+	private void createDateOfBirth(User user) {
 		System.out.println("Введите дату рождения:");
 		while (true) {
 			String dateOfBirthCtreate = sc.next();
@@ -44,12 +44,12 @@ public class Console {
 		}
 	}
 
-	public void createTelNumber(User user) {
+	private void createTelNumber(User user) {
 		System.out.println("Введите номер телефона: +375...");
 		while (true) {
 			String telNumberCreate = sc.next();
 			BelarusPhoneValidator phone = new BelarusPhoneValidator();
-			if (!phone.validate(telNumberCreate)) {
+			if (!phone.isValid(telNumberCreate)) {
 				System.out.println("Не правильно введен номер. Повторите еще раз!");
 			} else {
 				user.setPhone(telNumberCreate);
@@ -58,12 +58,12 @@ public class Console {
 		}
 	}
 
-	public void createEmail(User user) {
+	private void createEmail(User user) {
 		System.out.println("Введите адрес элетронной почты:");
 		while (true) {
 			String emailCreate = sc.next();
 			EmailValidator email = new EmailValidator();
-			if (!email.validate(emailCreate)) {
+			if (!email.isValid(emailCreate)) {
 				System.out.println("Не правильно введен адрес электронной почты. Повторите еще раз!");
 			} else {
 				user.setEmail(emailCreate);
@@ -72,7 +72,7 @@ public class Console {
 		}
 	}
 
-	public void createMoneyUser(User user) {
+	private void createMoneyUser(User user) {
 		System.out.println("Введите сумму для зачисления на баланс:");
 		while (true) {
 			int moneyCreate = sc.nextInt();

@@ -1,14 +1,11 @@
 package by.academy.homework.hw3.deal;
 
-import java.text.ParseException;
-
 public class Info {
-	
+
 	public Info() {
-		
 	}
-	
-	public void getInfoUser(User user) throws ParseException {
+
+	public void getInfoUser(User user) {
 		System.out.println();
 		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
 		System.out.println("xXxXx ЛИЧНЫЙ КАБИНЕТ ПОЛЬЗОВАТЕЛЯ xXxXx");
@@ -27,5 +24,4 @@ public class Info {
 		System.out.println("(Баланс:) " + user.getMoney() + "$");
 		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
 	}
-
 }

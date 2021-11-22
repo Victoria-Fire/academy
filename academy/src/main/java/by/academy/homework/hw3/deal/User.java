@@ -2,10 +2,10 @@ package by.academy.homework.hw3.deal;
 
 public class User {
 	private String name;
-	private double money;
 	private String dateOfBirth;
 	private String phone;
 	private String email;
+	private double money;
 
 	public User() {
 		super();
@@ -27,7 +27,7 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
@@ -35,7 +35,7 @@ public class User {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
+
 	public String getPhone() {
 		return phone;
 	}
@@ -43,7 +43,7 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
@@ -51,7 +51,7 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public double getMoney() {
 		return money;
 	}
@@ -59,5 +59,4 @@ public class User {
 	public void setMoney(double money) {
 		this.money = money;
 	}
-
 }
