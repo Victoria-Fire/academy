@@ -6,15 +6,14 @@ public class Deal {
 	private User seller;
 	private User buyer;
 	private Product[] products;
-	private Product[] basket;
+	private Basket basket;
 	private LocalDate deadline = LocalDate.now();
-	private int size;
 
 	public Deal() {
 		super();
 	}
 
-	public Deal(User seller, User buyer, Product[] products, Product[] basket) {
+	public Deal(User seller, User buyer, Product[] products, Basket basket) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
@@ -46,11 +45,11 @@ public class Deal {
 		this.products = products;
 	}
 
-	public Product[] getBasket() {
+	public Basket getBasket() {
 		return basket;
 	}
 
-	public void setBasket(Product[] basket) {
+	public void setBasket(Basket basket) {
 		this.basket = basket;
 	}
 
@@ -61,52 +60,23 @@ public class Deal {
 	}
 
 	public void getBasketList() {
-		if (basket[0] == null) {
+		if (basket.get(0) == null) {
 			System.out.println("Корзина пуста :(");
 			return;
 		}
-		for (int i = 0; i < basket.length; i++) {
-			if (basket[i] != null) {
-				System.out.printf(
-						(i + 1) + " => " + basket[i].getType() + " \"" + basket[i].getName() + "\": "
-								+ basket[i].getQuantity() + " шт." + " x " + basket[i].getPrice() + "$" + " = %.2f$ \n",
-						basket[i].getProductsPrice());
-			}
+		for (int i = 0; i < basket.size(); i++) {
+			System.out.printf((i + 1) + " => " + basket.get(i).getType() + " \"" + basket.get(i).getName() + "\": "
+					+ basket.get(i).getQuantity() + " шт." + " x " + basket.get(i).getPrice() + "$" + " = %.2f$ \n",
+					basket.get(i).getProductsPrice());
 		}
 		System.out.printf("К оплате: %.2f$ \n", getFullPrice());
 	}
 
-	public void remove(int index) {
-		if (index < 0 || index > basket.length - 1) {
-			System.out.println("Index of bound exception");
-			return;
-		}
-		if (basket[0] == null) {
-			System.out.println("Корзина пуста :(");
-			return;
-		}
-		System.arraycopy(basket, index + 1, basket, index, size - index);
-		basket[--size] = null;
-	}
-
-	public void add(Product products) {
-		if (size + 1 >= basket.length) {
-			grow();
-		}
-		basket[size++] = products;
-	}
-
-	private void grow() {
-		Product[] newBasket = new Product[basket.length * 2 + 1];
-		System.arraycopy(basket, 0, newBasket, 0, basket.length);
-		basket = newBasket;
-	}
-
 	public double getFullPrice() {
 		double sum = 0;
-		for (int i = 0; i < basket.length; i++) {
-			if (basket[i] != null) {
-				sum += basket[i].getProductsPrice();
+		for (int i = 0; i < basket.size(); i++) {
+			if (basket.get(0) != null) {
+				sum += basket.get(i).getProductsPrice();
 			}
 		}
 		return sum;
@@ -114,11 +84,11 @@ public class Deal {
 
 	public void printBill() {
 		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
-		for (int i = 0; i < basket.length; i++) {
-			if (basket[i] != null) {
-				System.out.printf(basket[i].getType() + " \"" + basket[i].getName() + "\": " + basket[i].getQuantity()
-						+ " шт." + " x " + basket[i].getPrice() + "$" + " = %.2f$ \n", basket[i].getProductsPrice());
-			}
+		for (int i = 0; i < basket.size(); i++) {
+			System.out.printf(
+					basket.get(i).getType() + " \"" + basket.get(i).getName() + "\": " + basket.get(i).getQuantity()
+							+ " шт." + " x " + basket.get(i).getPrice() + "$" + " = %.2f$ \n",
+					basket.get(i).getProductsPrice());
 		}
 		System.out.println("---------------------------------------");
 		System.out.printf("Итого: %.2f$ \n", getFullPrice());

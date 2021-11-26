@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Application {
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
 		Console console = new Console();
@@ -16,9 +16,8 @@ public class Application {
 		User buyer = new User();
 		console.createUsers(buyer);
 
-		int numberOfProducts = 10;
-		Product[] products = new Product[numberOfProducts];
-		Product[] basket = new Product[25];
+		Product[] products = new Product[10];
+		Basket basket = new Basket(1);
 
 		products[0] = new Dresses("Платье", "Футляр", "хлопок", "красный", "L", 25.33, 1);
 		products[1] = new Dresses("Платье", "Рубашка", "хлопок", "желтый", "M", 33.50, 1);
@@ -61,7 +60,10 @@ public class Application {
 						break;
 					}
 					if (number <= products.length) {
-						deal.add(products[number - 1]);
+						basket.add(products[number - 1]);
+						System.out.println("Введите количество:");
+						int bq = sc.nextInt();
+						basket.basketQuantity(basket.size() - 1, bq);
 					} else {
 						System.out.println("Нет такого номера... Повторите попытку");
 					}
@@ -81,8 +83,8 @@ public class Application {
 					if (number == 0) {
 						break;
 					}
-					if (number < basket.length) {
-						deal.remove(number - 1);
+					if (number <= basket.size()) {
+						basket.remove(number - 1);
 					} else {
 						System.out.println("Нет такого номера... Повторите попытку");
 					}

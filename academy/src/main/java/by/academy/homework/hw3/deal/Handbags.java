@@ -35,6 +35,7 @@ public class Handbags extends Product {
 		builder.append("\"" + name + "\":");
 		builder.append(", цвет - " + color);
 		builder.append(", цена - " + price + " $");
+		builder.append(", количество - " + quantity + " шт.");
 		return builder.toString();
 	}
 }

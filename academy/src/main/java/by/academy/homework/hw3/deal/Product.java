@@ -1,6 +1,6 @@
 package by.academy.homework.hw3.deal;
 
-public abstract class Product {
+public abstract class Product implements Cloneable {
 	protected String type;
 	protected String name;
 	protected double price;
@@ -55,4 +55,10 @@ public abstract class Product {
 	protected void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	@Override
+	protected Product clone() throws CloneNotSupportedException {
+		return (Product) super.clone();
+	}
+
 }

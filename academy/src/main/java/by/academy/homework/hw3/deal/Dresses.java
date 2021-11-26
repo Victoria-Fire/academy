@@ -57,6 +57,7 @@ public class Dresses extends Product {
 		builder.append(", цвет - " + color);
 		builder.append(", размер - " + size);
 		builder.append(", цена - " + price + " $");
+		builder.append(", количество - " + quantity + " шт.");
 		return builder.toString();
 	}
 }
