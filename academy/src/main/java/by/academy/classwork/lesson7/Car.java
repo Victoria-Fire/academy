@@ -1,6 +1,8 @@
 package by.academy.classwork.lesson7;
 
-public class Car {
+import java.io.Serializable;
+
+public class Car implements Serializable {
 	private int day;
 	private double cost;
 
