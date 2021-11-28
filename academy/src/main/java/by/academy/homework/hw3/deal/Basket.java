@@ -1,7 +1,5 @@
 package by.academy.homework.hw3.deal;
 
-import java.util.Arrays;
-
 public class Basket {
 	private Product[] basket;
 	private int size;
@@ -16,6 +14,14 @@ public class Basket {
 		this.basket = new Product[capacity];
 	}
 
+	public Product[] getBasket() {
+		return basket;
+	}
+
+	public void setBasket(Product[] basket) {
+		this.basket = basket;
+	}
+
 	public int size() {
 		return size;
 	}
@@ -26,14 +32,6 @@ public class Basket {
 			return null;
 		}
 		return basket[index];
-	}
-
-	public void remove() {
-		if (size == 0) {
-			System.err.println("Index of bound exception");
-			return;
-		}
-		basket[--size] = null;
 	}
 
 	public void remove(int index) {
@@ -60,19 +58,6 @@ public class Basket {
 		}
 	}
 
-	public void add(int index, Product baskett) {
-		if (index > basket.length) {
-			System.err.println("Index of bound exception");
-			return;
-		}
-		if (size + 1 >= basket.length) {
-			grow();
-		}
-		System.arraycopy(basket, index, basket, index + 1, size - index);
-		basket[index] = baskett;
-		size++;
-	}
-	
 	public void basketQuantity(int index, int quantity) {
 		basket[index].setQuantity(quantity);
 	}
@@ -81,22 +66,5 @@ public class Basket {
 		Product[] newBasket = new Product[basket.length * 2 + 1];
 		System.arraycopy(basket, 0, newBasket, 0, basket.length);
 		basket = newBasket;
-	}
-
-	public Product[] getBasket() {
-		return basket;
-	}
-
-	public void setBasket(Product[] basket) {
-		this.basket = basket;
-	}
-
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Basket [basket=");
-		builder.append(Arrays.toString(basket));
-		builder.append("]");
-		return builder.toString();
 	}
 }

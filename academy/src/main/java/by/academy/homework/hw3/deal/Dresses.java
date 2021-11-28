@@ -42,6 +42,12 @@ public class Dresses extends Product {
 
 	@Override
 	protected double getDiscount() {
+		if ((material == "хлопок") && (quantity > 45)) {
+			return 0.5;
+		}
+		if (quantity > 45) {
+			return 0.7;
+		}
 		if (material == "хлопок") {
 			return 0.9;
 		}

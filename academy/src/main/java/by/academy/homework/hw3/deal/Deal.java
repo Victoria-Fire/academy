@@ -72,6 +72,20 @@ public class Deal {
 		System.out.printf("К оплате: %.2f$ \n", getFullPrice());
 	}
 
+	public void changeQuantityProductsMinus(Product product, int number) {
+		product.setQuantity(product.getQuantity() - number);
+	}
+	
+	public void changeQuantityProductsPlus (int number) {
+		String nameRemove = basket.get(number - 1).getName();
+		int quantityRemove = basket.get(number - 1).getQuantity();
+		for (int i = 0; i < products.length; i++) {
+			if (products[i].getName().equals(nameRemove)) {
+				products[i].setQuantity(products[i].getQuantity() + quantityRemove);
+			}
+		}
+	}
+
 	public double getFullPrice() {
 		double sum = 0;
 		for (int i = 0; i < basket.size(); i++) {
@@ -93,6 +107,13 @@ public class Deal {
 		System.out.println("---------------------------------------");
 		System.out.printf("Итого: %.2f$ \n", getFullPrice());
 		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
+	}
+	
+	public void printStorage() {
+		System.out.println("НА СКЛАДЕ ОСТАЛОСЬ:");
+		for (Product product : products) {
+			System.out.println(product.getType() + " \"" + product.getName() + "\" - " + product.getQuantity() + " шт.");
+		}
 	}
 
 	public void paymentConfirmationForBuyer() {
@@ -132,5 +153,14 @@ public class Deal {
 		System.out.printf("Вам зачислено:  %.2f$ \n", getFullPrice());
 		System.out.printf("Ваш баланс: %.2f$ \n", (seller.getMoney() + getFullPrice()));
 		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
+		printStorage();
+		System.out.println("xXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx");
+	}
+	
+	public boolean checkDeal() {
+		if(basket.get(0) != null) {
+			return true;
+		}
+		return false;
 	}
 }

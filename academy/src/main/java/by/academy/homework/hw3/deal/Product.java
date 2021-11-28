@@ -60,5 +60,4 @@ public abstract class Product implements Cloneable {
 	protected Product clone() throws CloneNotSupportedException {
 		return (Product) super.clone();
 	}
-
 }

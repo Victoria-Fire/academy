@@ -22,6 +22,9 @@ public class Handbags extends Product {
 
 	@Override
 	protected double getDiscount() {
+		if ((color == "розовый") && (quantity >= 30)) {
+			return 0.4;
+		}
 		if (color == "розовый") {
 			return 0.7;
 		}
