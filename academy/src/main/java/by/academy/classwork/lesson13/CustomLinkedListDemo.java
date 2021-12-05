@@ -8,7 +8,7 @@ public class CustomLinkedListDemo {
 		list.add(2);
 //		list.add(3);
 //		list.add(4);
-		list.print();
+//		list.print();
 //		list.add(1, 14);
 //		list.print();
 //		list.remove(3);

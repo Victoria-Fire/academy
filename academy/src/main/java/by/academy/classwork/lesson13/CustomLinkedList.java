@@ -66,19 +66,6 @@ public class CustomLinkedList<T> {
 		return null;
 	}
 
-//	private Node<T> getNode(int index) {
-//        int counter = 0;
-//        Node<T> node = head;
-//        while (node != null) {
-//            if (counter == index) {
-//                break;
-//            }
-//            node = node.next;
-//            counter++;
-//        }
-//        return node;
-//    }
-
 //	 private Node<T> getNode(int index) {
 //         int counter = 0;
 //         Node<T> node = head;
@@ -92,52 +79,15 @@ public class CustomLinkedList<T> {
 //         return node;
 //     }
 
-//	public T get(int index) {
-//        Node<T> node = head;
-//        int current = 0;
-//        while (current < index) {
-//            node = node.next;
-//            current++;
-//        }
-//        return node.value;
-//    }
-
-
-//	public Node getNode(T object) {
-//		Node current = first;
-//		while (current != null && counter <= index) {
-//			if (index == counter) {
-//				return current;
-//			}
-//			current = current.next;
-//			counter++;
-//		}
-//		return null;
-//	}
-
 	public T get(int index) {
 		return getNode(index).value;
 	}
-
-//	public T get(int index) {
-//        int counter = 0;
-//        Node<T> node = head;
-//        while (node != null) {
-//            if (counter == index) {
-//                break;
-//            }
-//            node = node.next;
-//            counter++;
-//        }
-//        return node.value;
-//    }
 
 	public void get(T object) {
 
 	}
 
 	public T remove(int index) {
-		Node current = last;
 
 		return null;
 
@@ -192,14 +142,14 @@ public class CustomLinkedList<T> {
 //        return null;
 //    }
 	
-	 public void print() {
-         Node node = first;
-         while (node != null) {
-             System.out.println(node.value);
-             node = node.next;
-         }
-         System.out.println();
-     }
+//	 public void print() {
+//         Node node = first;
+//         while (node != null) {
+//             System.out.println(node.value);
+//             node = node.next;
+//         }
+//         System.out.println();
+//     }
 
 	class Node {
 		Node next;
